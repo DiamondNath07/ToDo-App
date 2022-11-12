@@ -20,7 +20,9 @@
       1,
       {
         "js": "always",
-        "json": "always"
+        "json": "always",
+        "lodash": "always"
+
       }
     ]
   },
