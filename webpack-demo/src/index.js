@@ -12,3 +12,6 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+// my code
+

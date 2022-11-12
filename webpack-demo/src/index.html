@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
-</head>
-<body>
-    <h1>Hello webpack!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, expedita?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde vel autem odit natus, iusto nam! Dicta officia facilis repudiandae quas deserunt. Nam, reiciendis nostrum! Enim, in illo suscipit aliquam accusantium repellat beatae expedita, voluptatum provident alias deserunt blanditiis perferendis natus id quo odit recusandae numquam distinctio unde magni explicabo possimus exercitationem? Ut odit nihil eos tempora vel voluptates ex. Quod a quaerat reprehenderit. Voluptates eaque, et fuga sequi ipsam provident ea at pariatur, beatae id optio, unde asperiores dicta molestiae dolore. Blanditiis cumque dignissimos odio rerum soluta laudantium perferendis corporis, accusamus enim aut, dolor nulla ea numquam ducimus atque.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <article class="grocery-wrapper">
+        <p class="alert"></p>
+        <header class="heading">
+          <h2 class="grocery-title">Today's Todo</h2>
+          <span><i class="fa-solid fa-rotate"></i></span>
+        </header>
+        <form class="grocery-form">
+          <input
+            type="text"
+            class="grocery-item"
+            placeholder="Add to your list"
+          />
+        </form>
+        <div class="grocery-container">
+          <div class="grocery-list"></div>
+          <button class="clear-list">clear items</button>
+        </div>
+      </article>
+    </main>
+
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+   
+    <title>Grocery_App</title>
+  </head>
+  <body>
+    
+    <script src="./app.js"></script>
+  </body>
+</html> -->
