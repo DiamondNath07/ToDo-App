@@ -44,7 +44,7 @@ Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.g
 
 ### Go Live
 
-https://diamondnath07.github.io/Awesome-books/
+https://diamondnath07.github.io/Web-Pack/
 
 ## Show your support
 
