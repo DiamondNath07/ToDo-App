@@ -1,17 +1,5 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 import './style.css';
-
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
 
 // my code
 
@@ -24,7 +12,7 @@ const clearBtn = document.querySelector('.clear-list');
 
 // edit option
 // let editElement;
-const editFlag = false;
+let editFlag = false;
 // const editID = '';
 
 // clearItems function
@@ -47,9 +35,8 @@ function displayAlert(text, action) {
 // set back to default
 function setBacktoDefault() {
   groceryItem.value = '';
-  // editFlag = false;
-  // editID = '';
-  // submitBtn.textContent = 'Submit';
+  editFlag = false;
+  editID = '';
 }
 
 // functions
@@ -57,8 +44,9 @@ function setBacktoDefault() {
 function addItem(e) {
   e.preventDefault();
   const { value } = groceryItem;
+  console.log(value);
   const id = new Date().getTime().toString();
-  if (!value === '' && editFlag === false) {
+  if (value && editFlag === false) {
     const element = document.createElement('article');
     element.classList.add('listed-item');
     const attr = document.createAttribute('data-id');
@@ -76,6 +64,7 @@ function addItem(e) {
               </button>
             </span>
     `;
+    console.log(element);
     const deleteBtn = element.querySelector('.close-btn');
     const editBtn = element.querySelector('.edit-btn');
 
@@ -101,4 +90,3 @@ function addItem(e) {
 
 form.addEventListener('submit', addItem);
 clearBtn.addEventListener('click', clearItem);
-window.addEventListener('DOMContentLoaded', setupItems);
