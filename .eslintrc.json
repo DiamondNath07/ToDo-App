@@ -21,7 +21,7 @@
       {
         "js": "always",
         "json": "always",
-        "lodash": "always"
+       
 
       }
     ]
