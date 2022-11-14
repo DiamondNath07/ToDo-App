@@ -1,92 +1,69 @@
-// import _ from 'lodash';
 import './style.css';
 
-// my code
+class TodoList {
+  constructor() {
+    this.todo = [];
+    this.storagePass = 'todoApp';
+  }
 
-const alert = document.querySelector('.alert');
-const form = document.querySelector('.grocery-form');
-const groceryItem = document.querySelector('.grocery-item');
-const container = document.querySelector('.grocery-container');
-const list = document.querySelector('.grocery-list');
-const clearBtn = document.querySelector('.clear-list');
+  restoreDefault() {
+    const addtext = document.querySelector('.add-text');
+    addtext.value = '';
+  }
 
-// edit option
-// let editElement;
-let editFlag = false;
-// const editID = '';
+  addActivity() {
+    const addtext = document.querySelector('.add-text');
+    const addList = {
+      id: Date.now(),
+      description: addtext.value,
+      index: this.todo.length + 1,
+      completed: false,
+    };
 
-// clearItems function
-function clearItem() {}
+    this.todo.push(addList);
+  }
 
-function deleteItem() {}
-function editItem() {}
-
-// functions
-
-function displayAlert(text, action) {
-  alert.textContent = text;
-  alert.classList.add(`alert-${action}`);
-  setTimeout(() => {
-    alert.textContent = '';
-    alert.classList.remove(`alert-${action}`);
-  }, 1000);
-}
-
-// set back to default
-function setBacktoDefault() {
-  groceryItem.value = '';
-  editFlag = false;
-  editID = '';
-}
-
-// functions
-
-function addItem(e) {
-  e.preventDefault();
-  const { value } = groceryItem;
-  console.log(value);
-  const id = new Date().getTime().toString();
-  if (value && editFlag === false) {
-    const element = document.createElement('article');
-    element.classList.add('listed-item');
-    const attr = document.createAttribute('data-id');
-    attr.value = id;
+  displayActivity() {
+    const labelContainer = document.querySelector('.label-container');
+    const addtext = document.querySelector('.add-text');
+    const value = addtext.value;
+    const element = document.createElement('div');
+    const attr = document.createAttribute('class');
+    attr.value = 'label';
     element.setAttributeNode(attr);
     element.innerHTML = `
-                <p class="selected-item">${value}</p>
+    <input type="checkbox" value="dishes" />
+            <label>${value}</label>
+            <span class="icon-more"
+              ><i class="fa-solid fa-ellipsis-vertical"></i
+            ></span>
+            <span class="icon-trash"><i class="fa-solid fa-trash"></i></span>
+            <br />
+   `;
 
-            <span class="list-btns">
-              <button class="edit-btn">
-                <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-              <button class="close-btn">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </span>
-    `;
-    console.log(element);
-    const deleteBtn = element.querySelector('.close-btn');
-    const editBtn = element.querySelector('.edit-btn');
-
-    deleteBtn.addEventListener('click', deleteItem);
-    editBtn.addEventListener('click', editItem);
-
-    // appendchild
-    list.appendChild(element);
-    displayAlert('item added to the list', 'success');
-    container.classList.add('show-container');
-    // set back to default
-    setBacktoDefault();
-
-    // add toLocalStorage
-    addToLocalStorage(id, value);
-  } else if (value !== '' && editFlag) {
-  } else {
-    displayAlert('please enter value', 'danger');
+    labelContainer.appendChild(element);
   }
+
+  // saveData() {
+  //   localStorage.setItem(this.storagePass, JSON.stringify(this.todo));
+  // }
+
+  // LoadData() {
+  //   this.todo = JSON.parse(localStorage.getItem(this.storagePass));
+  // }
 }
 
-// add event listeners
+const todoApp = new TodoList();
+const form = document.querySelector('.Todo-form');
 
-form.addEventListener('submit', addItem);
-clearBtn.addEventListener('click', clearItem);
+// window.onload = () => {
+//   todoApp.LoadData();
+//   todoApp.displayActivity();
+// };
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  todoApp.addActivity();
+  todoApp.displayActivity();
+  todoApp.restoreDefault();
+  todoApp.saveData();
+});
