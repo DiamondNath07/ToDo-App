@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome books
+# Todo app. 
 
-> Webpack library
+> This application helps you add items to list and edit items as well ad delete completed items
 
 ## Built With
 
@@ -14,7 +14,7 @@
 
 ## Getting Started
 
-**You can run the application locally by cloning this [repository](https://github.com/DiamondNath07/Web-Pack.git)**
+**You can run the application locally by cloning this [repository](https://github.com/DiamondNath07/ToDo-App.git)**
 
 ### Local Setup
 
@@ -23,7 +23,7 @@ To run this project locally, make sure you have done the following:
 - Created hint.rc file
 - Created stylelint.rc file
 - Created .gihub/workflows/linters/yml
-- Get a copy of the project by running `https://github.com/DiamondNath07/Web-Pack.git`
+- Get a copy of the project by running `https://github.com/DiamondNath07/ToDo-App.git`
 - cd into the project
 - Open the project using code editor of your choice
 - Open your prefered browser
@@ -44,7 +44,7 @@ Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.g
 
 ### Go Live
 
-https://diamondnath07.github.io/Web-Pack/
+https://diamondnath07.github.io/ToDo-App.git
 
 ## Show your support
 
