@@ -49,10 +49,15 @@ main {
 
 .icon-trash {
   float: right;
+  padding: 0 10px;
   display: none;
 }
 
 .clear-list {
   text-align: center;
   margin: 20px 0 10px 0;
+}
+
+.show {
+  display: block;
 }

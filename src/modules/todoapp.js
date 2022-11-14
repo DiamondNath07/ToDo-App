@@ -33,15 +33,62 @@ export default class TodoList {
     element.innerHTML = `
     <input type="checkbox" value="dishes" />
             <label>${value}</label>
-            <span class="icon-more"
+            <span class="icon-more" 
               ><i class="fa-solid fa-ellipsis-vertical"></i
             ></span>
-            <span class="icon-trash"><i class="fa-solid fa-trash"></i></span>
+            <span class="icon-trash" ><i class="fa-solid fa-trash"></i></span>
             <br />
    `;
     this.text = '';
+    // console.log(element);
     labelContainer.appendChild(element);
+
+    // console.log(labelContainer);
+    const target = labelContainer.currentTarget;
+    // console.log(target);
+
+    const icon = (e) => {
+      const value = e.currentTarget;
+      console.log(value);
+    };
+    const opt = document.querySelector('.icon-more');
+    //
+    const trash = document.querySelector('.icon-trash');
+
+    // for (let i = 0; i < opt.length; i++) {
+    //   opt[i].addEventListener('click', () => {
+    //     console.log(opt);
+
+    //     trash.classList.toggle('show');
+    //   });
+    // }
+    opt.addEventListener('click', () => {
+      icon();
+      
+      trash.classList.toggle('show');
+    });
+    if (opt) {
+      opt.map((icon, index) => {
+        console.log(icon);
+      });
+    }
+    // this.todo.forEach((list) => {
+
+    // });
+
+    // trash.addEventListener('click', () => {
+    //   this.deleteData();
+    // });
   }
+
+  // deleteData(id) {
+  //   this.todo = this.todo.filter((list) => {
+  //     list.id !== id;
+  //     list = document.getElementById(id);
+  //     console.log(list);
+  //     list.remove(id);
+  //   });
+  // }
 
   // saveData() {
   //   localStorage.setItem(this.storagePass, JSON.stringify(this.todo));
