@@ -11,35 +11,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-      <header class="heading">
-        <h3 class="app-title">Today's ToDo</h3>
-        <span><i class="fa-solid fa-rotate"></i></span>
-      </header>
-
-      <div class="form-container">
-        <form class="Todo-form">
-          <input
-            type="text"
-            placeholder="Add to your list..."
-            class="add-text"
-          /><br />
-        </form>
-        <div class="label-container">
-          <!-- <div class="label">
-           
-          </div> -->
-        </div>
-        <!-- <div class="label">
-          <input type="checkbox" value="dishes" />
-          <label>complete the todo list project</label><br />
-        </div> -->
-        <p class="clear-list">clear all completed</p>
+    <div class="wrapper">
+      <div class="task-input">
+        <img src="./img/time-icon.png" alt="icon" />
+        <input type="text" placeholder="add new task" />
       </div>
-    </main>
-
-    <script type="module" src="./index.js"></script>
+      <div class="controls">
+        <div class="filters">
+          <span id="all" class="active">All</span>
+          <span id="pending">pending</span>
+          <span id="completed">completed</span>
+        </div>
+        <button class="clear-btn">clear all</button>
+      </div>
+      <ul class="task-box"></ul>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
