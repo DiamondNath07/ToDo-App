@@ -1,69 +1,72 @@
-<head><script defer src="main.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve 'C:\Users\USER\Documents\microverse\ToDo-App\src\index.html' in 'C:\Users\USER\Documents\microverse\ToDo-App'
-  ModuleNotFoundError: Module not found: Error: Can't resolve 'C:\Users\USER\Documents\microverse\ToDo-App\src\index.html' in 'C:\Users\USER\Documents\microve  rse\ToDo-App'
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\Compilation.js:2016:28
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:798:13
-      at eval (eval at create (C:\Users\USER\Documents\microverse\ToDo-App\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:270:22
-      at eval (eval at create (C:\Users\USER\Documents\microverse\ToDo-App\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:434:22
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:116:11
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:670:25
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:855:8
-      at C:\Users\USER\Documents\microverse\ToDo-App\node_modules\webpack\lib\NormalModuleFactory.js:975:5
-  
-  - Compilation.js:2016 
-    [ToDo-App]/[webpack]/lib/Compilation.js:2016:28
-  
-  - NormalModuleFactory.js:798 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:798:13
-  
-  
-  - NormalModuleFactory.js:270 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:270:22
-  
-  
-  - NormalModuleFactory.js:434 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:434:22
-  
-  - NormalModuleFactory.js:116 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:116:11
-  
-  - NormalModuleFactory.js:670 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:670:25
-  
-  - NormalModuleFactory.js:855 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:855:8
-  
-  - NormalModuleFactory.js:975 
-    [ToDo-App]/[webpack]/lib/NormalModuleFactory.js:975:5
-  
-  - child-compiler.js:169 
-    [ToDo-App]/[html-webpack-plugin]/lib/child-compiler.js:169:18
-  
-  - Compiler.js:551 finalCallback
-    [ToDo-App]/[webpack]/lib/Compiler.js:551:5
-  
-  - Compiler.js:577 
-    [ToDo-App]/[webpack]/lib/Compiler.js:577:11
-  
-  - Compiler.js:1196 
-    [ToDo-App]/[webpack]/lib/Compiler.js:1196:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [ToDo-App]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1192 
-    [ToDo-App]/[webpack]/lib/Compiler.js:1192:33
-  
-  - Compilation.js:2787 finalCallback
-    [ToDo-App]/[webpack]/lib/Compilation.js:2787:11
-  
-  - Compilation.js:3092 
-    [ToDo-App]/[webpack]/lib/Compilation.js:3092:11
-  
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>TodoApp</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="input-container">
+          <div class="title-container">
+            <p class="app-title">Todays to do</p>
+          <span class="reload"><i class="fa-solid fa-rotate"></i></span>
+          </div>
+          <div class="form-container">
+            <div>
+              <form action="#">
+                <input
+                  id="input-text"
+                  type="text"
+                  placeholder="Add to your list"
+                  required
+                />
+                <button type="submit" id="addBtn">
+                  <img
+                    class="trashImg"
+                    id="trashImg"
+                    src="./assets/trash.svg"
+                    alt="trashImg"
+                  />
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="to-do-list" id="to-do-container">
+            <article class="to-do-container2">
+              <div class="tbody" id="list-container"></div>
+            </article>
+            <button type="button" id="completedBtn" class="completedBtn">
+              <p class="textcomplete">Clear all completed.</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<!-- <p> 
+   <td> <input class='check'  id='checkBox' type="checkbox" checked /><td>
+    <td><p class='paragragh strike-through'> ${todo.description}</p><td>
+    <td class='hide'>${todo.id}</td>
+    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+    <td><a href="#" class='delete'>🗑</a><td>
+
+      second
+
+       <td> <input class='check'  id='checkBox' type="checkbox" /><td>
+    <td><p class='paragragh'> ${todo.description}</p><td>
+    <td class='hide'>${todo.id}</td>
+    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+
+    <td><a href="#" class='delete'>🗑</a><td>
+</p>-->

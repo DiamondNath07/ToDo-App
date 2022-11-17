@@ -97,12 +97,12 @@ form {
 
 .kebabImg {
   position: absolute;
-  right: 10px;
+  right: 40px;
 }
 
 .delete {
   position: absolute;
-  right: 40px;
+  right: 10px;
 }
 
 .completedBtn {

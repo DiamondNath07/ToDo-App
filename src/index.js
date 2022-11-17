@@ -21,24 +21,24 @@ document.querySelector('form').addEventListener('submit', (e) => {
   UiTodo.deleteData();
 });
 document.getElementById('to-do-container').addEventListener('click', (e) => {
-  Storage.editInput(
-    e.target.parentElement.parentElement.children[4],
-    e.target.parentElement,
-    e.target.parentElement.parentElement,
-    e.target.parentElement.parentElement.children[0].children[0],
-  );
   UiTodo.trashTodo(e.target);
   if (e.target.classList.contains('check')) {
     Storage.checkboxCompleted(
       e.target.parentElement.parentElement.children[4],
-      e.target.checked,
+      e.target.checked
     );
     e.target.parentElement.parentElement.children[2].children[0].classList.toggle(
-      'strike-through',
+      'strike-through'
+    );
+    Storage.editInput(
+      e.target.parentElement.parentElement.children[4].textContent,
+      e.target.parentElement,
+      e.target.parentElement.parentElement,
+      e.target.parentElement.parentElement.children[2].children[0]
     );
   }
   Storage.remove(
-    e.target.parentElement.previousElementSibling.previousElementSibling
-      .textContent,
+    e.target.parentElement.parentElement.previousElementSibling
+      .previousElementSibling.textContent
   );
 });
