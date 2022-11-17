@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo-App</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -11,24 +10,63 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <title>TodoApp</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="task-input">
-        <img src="./img/time-icon.png" alt="icon" />
-        <input type="text" placeholder="add new task" />
-      </div>
-      <div class="controls">
-        <div class="filters">
-          <span id="all" class="active">All</span>
-          <span id="pending">pending</span>
-          <span id="completed">completed</span>
+    <main>
+      <div class="container">
+        <div class="input-container">
+          <div class="title-container">
+            <p class="app-title">Todays to do</p>
+          <span class="reload"><i class="fa-solid fa-rotate"></i></span>
+          </div>
+          <div class="form-container">
+            <div>
+              <form action="#">
+                <input
+                  id="input-text"
+                  type="text"
+                  placeholder="Add to your list"
+                  required
+                />
+                <button type="submit" id="addBtn">
+                  <img
+                    class="trashImg"
+                    id="trashImg"
+                    src="./assets/trash.svg"
+                    alt="trashImg"
+                  />
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="to-do-list" id="to-do-container">
+            <article>
+              <div class="tbody" id="list-container"></div>
+            </article>
+            <button type="button" id="completedBtn" class="completedBtn">
+              <p class="textcomplete">Clear all completed.</p>
+            </button>
+          </div>
         </div>
-        <button class="clear-btn">clear all</button>
       </div>
-      <ul class="task-box"></ul>
-    </div>
-    <script type="module" src="./index.js"></script>
+    </main>
   </body>
 </html>
+<!-- <p> 
+   <td> <input class='check'  id='checkBox' type="checkbox" checked /><td>
+    <td><p class='paragragh strike-through'> ${todo.description}</p><td>
+    <td class='hide'>${todo.id}</td>
+    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+    <td><a href="#" class='delete'>🗑</a><td>
+
+      second
+
+       <td> <input class='check'  id='checkBox' type="checkbox" /><td>
+    <td><p class='paragragh'> ${todo.description}</p><td>
+    <td class='hide'>${todo.id}</td>
+    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+
+    <td><a href="#" class='delete'>🗑</a><td>
+</p>-->
