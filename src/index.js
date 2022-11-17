@@ -21,15 +21,15 @@ document.querySelector('form').addEventListener('submit', (e) => {
   UiTodo.deleteData();
 });
 document.getElementById('to-do-container').addEventListener('click', (e) => {
+  const eventTarget = e.target;
   UiTodo.trashTodo(e.target);
+
   if (e.target.classList.contains('check')) {
     Storage.checkboxCompleted(
-      e.target.parentElement.parentElement.children[4],
-      e.target.checked
+      eventTarget.parentElement.parentElement.children[4],
+      eventTarget.checked
     );
-    e.target.parentElement.parentElement.children[2].children[0].classList.toggle(
-      'strike-through'
-    );
+    eventTarget.parentElement.children.classList.toggle('strike-through');
     Storage.editInput(
       e.target.parentElement.parentElement.children[4].textContent,
       e.target.parentElement,

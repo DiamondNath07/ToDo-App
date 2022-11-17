@@ -22,8 +22,9 @@ class UiTodo {
 
     if (todo.completed) {
       inputrow.innerHTML = `
-       <input class='check'  id='checkBox' type="checkbox" checked />
-    <p class='paragragh strike-through'> ${todo.description}</p>
+       <input class='check'  id='checkBox' type="checkbox" checked  />
+    <input type='text' class='paragragh' value= ${todo.description}/>
+
     <span class='hide'>${todo.id}</span>
     <img class='kebabImg' src="${kebab}" alt="" />
     <a href="#" class='delete'>🗑</a>
@@ -31,7 +32,8 @@ class UiTodo {
     } else {
       inputrow.innerHTML = `
       <input class='check'  id='checkBox' type="checkbox"  />
-    <p class='paragragh '> ${todo.description}</p>
+        <input type='text' class='paragragh' value= ${todo.description}>
+
     <span class='hide'>${todo.id}</span>
     <img class='kebabImg' src="${kebab}" alt="" />
     <a href="#" class='delete'>🗑</a>
