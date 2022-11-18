@@ -26,7 +26,7 @@ document.getElementById('to-do-container').addEventListener('click', (e) => {
 
   if (e.target.classList.contains('check')) {
     Storage.checkboxCompleted(
-      eventTarget.parentElement, children[4],
+      eventTarget.parentElement.children[4],
       eventTarget.checked,
     );
     eventTarget.parentElement.children[1].classList.toggle('strike-through');
