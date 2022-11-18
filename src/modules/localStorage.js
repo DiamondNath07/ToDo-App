@@ -27,6 +27,7 @@ class Storage {
     });
     localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
     Storage.resetId();
+    
   }
 
   static resetId() {

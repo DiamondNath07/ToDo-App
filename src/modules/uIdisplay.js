@@ -13,32 +13,29 @@ class UiTodo {
   }
 
   static addToDoList(todo) {
+    const isCompleted = (todo) => {
+      if (todo.completed) {
+        return 'checked';
+      } else {
+        return '';
+      }
+    };
     const ulContainer = document.getElementById('list-container');
-    // const row = document.createElement('tr');
     const inputrow = document.createElement('div');
     const attr = document.createAttribute('class');
     attr.value = 'single-list';
     inputrow.setAttributeNode(attr);
 
-    if (todo.completed) {
-      inputrow.innerHTML = `
-       <input class='check'  id='checkBox' type="checkbox" checked  />
-    <input type='text' class='paragragh' value= ${todo.description}/>
-
-    <span class='hide'>${todo.id}</span>
+    inputrow.innerHTML = `
+       <input class='check'  id='checkBox' type="checkbox" ${isCompleted(
+         todo
+       )}/>
+    <input type='text' class='paragragh' value= ${todo.description}>
+    <span id='${todo.id} class='hide'></span>
     <img class='kebabImg' src="${kebab}" alt="" />
     <a href="#" class='delete'>🗑</a>
        `;
-    } else {
-      inputrow.innerHTML = `
-      <input class='check'  id='checkBox' type="checkbox"  />
-        <input type='text' class='paragragh' value= ${todo.description}>
 
-    <span class='hide'>${todo.id}</span>
-    <img class='kebabImg' src="${kebab}" alt="" />
-    <a href="#" class='delete'>🗑</a>
-    `;
-    }
     ulContainer.appendChild(inputrow);
   }
 
@@ -46,6 +43,8 @@ class UiTodo {
     if (list.classList.contains('delete')) {
       list.parentElement.remove();
     }
+    Storage.remove(list.parentElement.children[2].id);
+    console.log(list.parentElement.children[4]);
   }
 
   static deleteData() {
