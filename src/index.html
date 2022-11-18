@@ -3,50 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>TodoApp</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <main>
       <div class="container">
         <div class="input-container">
-          <div class="title-container">
-            <p class="app-title">Todays to do</p>
-          <span class="reload"><i class="fa-solid fa-rotate"></i></span>
-          </div>
-          <div class="form-container">
-            <div>
-              <form action="#">
-                <input
-                  id="input-text"
-                  type="text"
-                  placeholder="Add to your list"
-                  required
+          <p>Todays to do</p>
+          <div>
+            <form action="#">
+              <input
+                id="todo-input"
+                type="text"
+                placeholder="Add to your list"
+                required
+              />
+              <button type="submit" id="addBtn">
+                <img
+                  class="returnImg"
+                  id="returnImg"
+                  src="./assets/return.svg"
+                  alt="returnImg"
                 />
-                <button type="submit" id="addBtn">
-                  <img
-                    class="trashImg"
-                    id="trashImg"
-                    src="./assets/trash.svg"
-                    alt="trashImg"
-                  />
-                </button>
-              </form>
-            </div>
+              </button>
+            </form>
           </div>
 
           <div class="to-do-list" id="to-do-container">
-            <article class="to-do-container2">
-              <div class="tbody" id="list-container"></div>
-            </article>
+            <table>
+              <thead></thead>
+              <tbody class="tbody" id="tbody"></tbody>
+            </table>
             <button type="button" id="completedBtn" class="completedBtn">
-              <p class="textcomplete">Clear all completed.</p>
+              Clear all completed.
             </button>
           </div>
         </div>
@@ -54,19 +43,3 @@
     </main>
   </body>
 </html>
-<!-- <p> 
-   <td> <input class='check'  id='checkBox' type="checkbox" checked /><td>
-    <td><p class='paragragh strike-through'> ${todo.description}</p><td>
-    <td class='hide'>${todo.id}</td>
-    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
-    <td><a href="#" class='delete'>🗑</a><td>
-
-      second
-
-       <td> <input class='check'  id='checkBox' type="checkbox" /><td>
-    <td><p class='paragragh'> ${todo.description}</p><td>
-    <td class='hide'>${todo.id}</td>
-    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
-
-    <td><a href="#" class='delete'>🗑</a><td>
-</p>-->
