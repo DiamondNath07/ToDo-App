@@ -1,50 +1,44 @@
-import './style.css';
-// import TodoList from './modules/todoapp.js';
+import './styles/styles.css';
+import UiTodo from './modules/uIdisplay.js';
+import MyTodoApp from './modules/myTodoApp.js';
+import Storage from './modules/localStorage.js';
 
-const arrofObj = [
-  {
-    index: 1,
-    description: 'Wash the plate',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'I want to finish my task',
-    completed: false,
-  },
-];
-
-arrofObj.forEach(({ index, description, completed }) => {
-  const labelContainer = document.querySelector('.label-container');
-
-  const element = document.createElement('div');
-  const attr = document.createAttribute('class');
-  attr.value = 'label';
-  element.setAttributeNode(attr);
-  element.innerHTML = `
-    <input type="checkbox" value="dishes" />
-            <label placeholder='${completed}'>${(index, description)}</label>
-            <span class="icon-more"
-              ><i class="fa-solid fa-ellipsis-vertical"></i
-            ></span>
-            <span class="icon-trash"><i class="fa-solid fa-trash"></i></span>
-            <br />
-   
-   `;
-  labelContainer.appendChild(element);
+document.addEventListener('DOMContentLoaded', UiTodo.displayToDo);
+document.getElementById('completedBtn').addEventListener('click', () => {
+  Storage.removeCompleted();
 });
 
-const todoApp = new TodoList();
-const form = document.querySelector('.Todo-form');
-
-// window.onload = () => {
-//   todoApp.LoadData();
-//   todoApp.displayActivity();
-// };
-form.addEventListener('submit', (e) => {
+document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault();
-  todoApp.addActivity();
-  todoApp.displayActivity();
-  todoApp.restoreDefault();
-  todoApp.saveData();
+  const todoListItem = Storage.getToDo();
+  const toDoInput = document.getElementById('input-text').value;
+  const id = todoListItem.length + 1;
+  const completed = false;
+
+  const todo = new MyTodoApp(toDoInput, id, completed);
+  UiTodo.addToDoList(todo);
+  Storage.addTodo(todo);
+  UiTodo.deleteData();
+});
+document.getElementById('to-do-container').addEventListener('click', (e) => {
+  Storage.editInput(
+    e.target.parentElement.parentElement.children[4],
+    e.target.parentElement,
+    e.target.parentElement.parentElement,
+    e.target.parentElement.parentElement.children[0].children[0],
+  );
+  UiTodo.trashTodo(e.target);
+  if (e.target.classList.contains('check')) {
+    Storage.checkboxCompleted(
+      e.target.parentElement.parentElement.children[4],
+      e.target.checked,
+    );
+    e.target.parentElement.parentElement.children[2].children[0].classList.toggle(
+      'strike-through',
+    );
+  }
+  Storage.remove(
+    e.target.parentElement.previousElementSibling.previousElementSibling
+      .textContent,
+  );
 });
