@@ -1,4 +1,4 @@
-class MyTodoApp {
+class CreateToDo {
   constructor(description, id, completed) {
     this.description = description;
     this.id = id;
@@ -6,4 +6,4 @@ class MyTodoApp {
   }
 }
 
-export default MyTodoApp;
+export default CreateToDo;

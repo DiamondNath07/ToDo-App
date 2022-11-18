@@ -1,50 +1,50 @@
 class Storage {
   static getToDo() {
-    let todoListItem;
-    if (!localStorage.getItem('todoListItem')) {
-      todoListItem = [];
+    let todoL;
+    if (!localStorage.getItem('todoL')) {
+      todoL = [];
     } else {
-      todoListItem = JSON.parse(localStorage.getItem('todoListItem'));
+      todoL = JSON.parse(localStorage.getItem('todoL'));
     }
-    return todoListItem;
+    return todoL;
   }
 
   static addTodo(todo) {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
 
-    todoListItem.push(todo);
+    todoL.push(todo);
 
-    localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
+    localStorage.setItem('todoL', JSON.stringify(todoL));
   }
 
   static remove(id) {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
     id = Number(id);
-    todoListItem.forEach((todo, i) => {
+    todoL.forEach((todo, i) => {
       if (todo.id === id) {
-        todoListItem.splice(i, 1);
+        todoL.splice(i, 1);
       }
     });
-    localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
+    localStorage.setItem('todoL', JSON.stringify(todoL));
     Storage.resetId();
   }
 
   static resetId() {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
     const arr = [];
 
-    todoListItem.forEach((item) => {
+    todoL.forEach((item) => {
       const newId = { ...item, id: arr.length + 1 };
       arr.push(newId);
-      localStorage.setItem('todoListItem', JSON.stringify(arr));
+      localStorage.setItem('todoL', JSON.stringify(arr));
     });
   }
 
   static checkboxCompleted(id, status) {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
     id = Number(id.textContent);
 
-    todoListItem.forEach((x) => {
+    todoL.forEach((x) => {
       if (x.id === id) {
         if (status) {
           x.completed = true;
@@ -52,37 +52,37 @@ class Storage {
           x.completed = false;
         }
       }
-      localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
+      localStorage.setItem('todoL', JSON.stringify(todoL));
     });
-    return todoListItem;
+    return todoL;
   }
 
   static removeCompleted() {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
 
-    const notCompleted = todoListItem.filter((x) => x.completed === false);
-    localStorage.setItem('todoListItem', JSON.stringify(notCompleted));
+    const notCompleted = todoL.filter((x) => x.completed === false);
+    localStorage.setItem('todoL', JSON.stringify(notCompleted));
     Storage.resetId();
     window.location.reload();
   }
 
   static deleteCompletedTask() {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
 
-    const notCompleted = todoListItem.filter((x) => x.completed === false);
-    localStorage.setItem('todoListItem', JSON.stringify(notCompleted));
+    const notCompleted = todoL.filter((x) => x.completed === false);
+    localStorage.setItem('todoL', JSON.stringify(notCompleted));
     Storage.resetId();
     // window.location.reload();
   }
 
   static delete(id) {
-    const todoListItem = Storage.getToDo();
+    const todoL = Storage.getToDo();
     const arr = [];
 
-    todoListItem.forEach((item) => {
+    todoL.forEach((item) => {
       if (item.id !== id) {
         arr.push(item);
-        localStorage.setItem('todoListItem', JSON.stringify(arr));
+        localStorage.setItem('todoL', JSON.stringify(arr));
       }
     });
   }
@@ -94,9 +94,9 @@ class Storage {
 
   static editInput(id, e, tdHide, editPara) {
     if (e.children[0].classList.contains('kebabImg')) {
-      const todoListItem = Storage.getToDo();
+      const todoL = Storage.getToDo();
       id = Number(id);
-      todoListItem.forEach((todo) => {
+      todoL.forEach((todo) => {
         if (id === todo.id) {
           const editItem = todo.description;
 
@@ -115,7 +115,7 @@ class Storage {
           input.addEventListener('keypress', () => {
             editPara.textContent = input.value;
             todo.description = input.value;
-            localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
+            localStorage.setItem('todoL', JSON.stringify(todoL));
           });
 
           tdHide.appendChild(input);
