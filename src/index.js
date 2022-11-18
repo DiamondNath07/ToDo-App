@@ -26,19 +26,19 @@ document.getElementById('to-do-container').addEventListener('click', (e) => {
 
   if (e.target.classList.contains('check')) {
     Storage.checkboxCompleted(
-      eventTarget.parentElement.children[4],
-      eventTarget.checked
+      eventTarget.parentElement, children[4],
+      eventTarget.checked,
     );
     eventTarget.parentElement.children[1].classList.toggle('strike-through');
     Storage.editInput(
       e.target.parentElement.parentElement.children[4].textContent,
       e.target.parentElement,
       e.target.parentElement.parentElement,
-      e.target.parentElement.parentElement.children[2].children[0]
+      e.target.parentElement.parentElement.children[2].children[0],
     );
   }
   Storage.remove(
     e.target.parentElement.parentElement.previousElementSibling
-      .previousElementSibling.textContent
+      .previousElementSibling.textContent,
   );
 });

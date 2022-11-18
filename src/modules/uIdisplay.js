@@ -16,9 +16,8 @@ class UiTodo {
     const isCompleted = (todo) => {
       if (todo.completed) {
         return 'checked';
-      } else {
-        return '';
       }
+      return '';
     };
     const ulContainer = document.getElementById('list-container');
     const inputrow = document.createElement('div');
@@ -28,8 +27,8 @@ class UiTodo {
 
     inputrow.innerHTML = `
        <input class='check'  id='checkBox' type="checkbox" ${isCompleted(
-         todo
-       )}/>
+    todo,
+  )}/>
     <input type='text' class='paragragh' value= ${todo.description}>
     <span id='${todo.id} class='hide'></span>
     <img class='kebabImg' src="${kebab}" alt="" />
@@ -44,7 +43,6 @@ class UiTodo {
       list.parentElement.remove();
     }
     Storage.remove(list.parentElement.children[2].id);
-    console.log(list.parentElement.children[4]);
   }
 
   static deleteData() {

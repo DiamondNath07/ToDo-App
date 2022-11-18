@@ -27,7 +27,6 @@ class Storage {
     });
     localStorage.setItem('todoListItem', JSON.stringify(todoListItem));
     Storage.resetId();
-    
   }
 
   static resetId() {
@@ -95,17 +94,11 @@ class Storage {
 
   static editInput(id, e, tdHide, editPara) {
     if (e.children[0].classList.contains('kebabImg')) {
-      console.log(e.children[3]);
-
       const todoListItem = Storage.getToDo();
-      console.log(todoListItem);
 
       todoListItem.forEach((todo) => {
         if (id === todo.id) {
-          console.log(id);
-
           const editItem = todo.description;
-          // console.log(editItem);
 
           const edit = document.getElementsByName('edit')[0];
 
