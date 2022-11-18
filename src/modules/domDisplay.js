@@ -18,7 +18,7 @@ class DomToDo {
 
     if (todo.completed) {
       row.innerHTML = `
-    <td> <input class='check'  id='checkBox' type="checkbox" checked /><td>
+    <td > <input class='check'  id='checkBox' type="checkbox" checked /><td>
     <td><p class='paragragh strike-through'> ${todo.description}</p><td>
     <td class='hide'>${todo.id}</td>
     <td><img class='kebabImg' src="${kebab}" alt="" /></td>
