@@ -91,6 +91,21 @@ form {
   border-bottom: 1px solid #a5a1a19d;
 }
 
+.paragraph {
+  border: none;
+  outline: none;
+  
+}
+input {
+  border: none;
+  outline: none;
+  padding: 5px 0;
+}
+.paragraph {
+  border: none;
+  outline: none;
+}
+
 .check {
   margin-right: 10px;
 }
