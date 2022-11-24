@@ -72,4 +72,3 @@ describe('Task one: add and delete', () => {
     expect(Storage.getToDo()).toStrictEqual(expected);
   });
 });
-
