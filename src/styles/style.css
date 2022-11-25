@@ -34,10 +34,6 @@ table td {
   width: 23.33%;
 }
 
-table td .paragraph {
-  color: red;
-}
-
 .strike-through {
   font-style: italic;
   text-decoration: line-through;
@@ -60,10 +56,14 @@ form {
   margin-top: 20px;
   color: rgb(82, 75, 75);
 }
- 
+
 .paragraph {
   outline: none;
   border: none;
+}
+
+table td .paragraph {
+  color: red;
 }
 
 #addBtn {
