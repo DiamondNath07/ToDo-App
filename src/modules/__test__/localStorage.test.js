@@ -71,3 +71,32 @@ describe('Task one: add and delete', () => {
     expect(Storage.getToDo()).toStrictEqual(expected);
   });
 });
+
+
+describe('task2', () => {
+  // Remove all completed
+  test('Remove all completed with the status of true', () => {
+    const mockTodo2 = {
+      description: 'remove completed',
+      id: 2,
+      completed: true,
+    };
+
+    const expected = [
+      {
+        description: 'json data',
+        id: 1,
+        completed: false,
+      },
+    ];
+
+    Storage.addTodo(mockTodo2);
+    Storage.deleteCompletedTask();
+
+    expect(Storage.getToDo()).toStrictEqual(expected);
+  });
+
+  
+
+  
+});
