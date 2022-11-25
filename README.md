@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="/src/assets/murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -39,7 +39,7 @@
 
 > This a todo-list application built as a CRUD application i.e an app that allows user Create,Read,Update and Delete.
 
-**[Todo-list]** is a...
+**[Todo-list]** is an application that helps you keep track of what to do and what have been done
 
 ## 🛠 Built With <a name="Object-Oriented-Programming"></a>
 
