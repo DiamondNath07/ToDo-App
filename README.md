@@ -1,65 +1,4 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Todo app. 
-
-> This application helps you add items to list and edit items as well ad delete completed items
-
-## Built With
-
-- HTML and CSS
-- JavaScript
-- Linters
-- webpack-demo
-- VS studio code, GitHub.
-
-## Getting Started
-
-**You can run the application locally by cloning this [repository](https://github.com/DiamondNath07/ToDo-App.git)**
-
-### Local Setup
-
-To run this project locally, make sure you have done the following:
-
-- Created hint.rc file
-- Created stylelint.rc file
-- Created .gihub/workflows/linters/yml
-- Get a copy of the project by running `https://github.com/DiamondNath07/ToDo-App.git`
-- cd into the project
-- Open the project using code editor of your choice
-- Open your prefered browser
-
-## Author
-
-👤 **Diamond Nathaniel I**
-
-- GitHub: [@DiamondNath07](https://github.com/DiamondNath07)
-- Twitter: [@DiamondNath07](https://twitter.com/@diamondNath07)
-- LinkedIn: [Diamond Nathaniel I](https://linkedin.com/in/diamond-nathaniel-6b664b245)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.git/issues) .
-
-### Go Live
-
-https://diamondnath07.github.io/ToDo-App/dist/
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- www.microverse.com
-
-
-## 📝 License
-
-This project is [MIT](./LICENSE) licensed.
-
-////////////////////////////////////
 
 <a name="readme-top"></a>
 
@@ -78,15 +17,15 @@ This project is [MIT](./LICENSE) licensed.
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#)
-  - [🛠 Built With](Object Oriented Programming)
-    - [Tech Stack]()
-    - [Key Features](Jest for testing)
-  - [🚀 Live Demo]()
-- [💻 Getting Started](#)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](Vs studio code or any text-editor)
+  - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
@@ -97,6 +36,7 @@ This project is [MIT](./LICENSE) licensed.
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
 - [📝 License](#license)
+
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -181,32 +121,6 @@ locaate the -test-_ file
 
 <!-- AUTHORS -->
 
-## Author
-
-👤 **Diamond Nathaniel I**
-
-
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.git/issues) .
-
-### Go Live
-
-https://diamondnath07.github.io/ToDo-App/dist/
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- www.microverse.com
-
-
-## 📝 License
 
 
 ## 👥 Authors <a name="authors"></a>
@@ -234,7 +148,7 @@ Give a ⭐️ if you like this project!
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.git/issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,9 +156,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+> If you like this project kindly give it a star rating
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -260,11 +172,11 @@ If you like this project...
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+> 
 
 - **[Question_1]**
 
-  - [Is_it_respondive]
+  - [Is_it_responsive and functional]
 
 
 
