@@ -115,4 +115,29 @@ describe('task2', () => {
     const output = Storage.updateDescription(2, 'Edit description', tasks);
     expect(output).toStrictEqual(expected);
   });
+
+  // Update Status
+  test('Update status of item', () => {
+    const mockTodo2 = {
+      description: 'Update status',
+      id: 2,
+      completed: true,
+    };
+    const expected = [
+      {
+        description: 'json data',
+        id: 1,
+        completed: false,
+      },
+      {
+        description: 'Update status',
+        id: 2,
+        completed: true,
+      },
+    ];
+
+    Storage.addTodo(mockTodo2);
+    Storage.checkboxCompleted(2, true);
+    expect(Storage.getToDo()).toStrictEqual(expected);
+  });
 });
