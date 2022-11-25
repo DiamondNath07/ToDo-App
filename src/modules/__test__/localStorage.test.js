@@ -1,7 +1,6 @@
 import Storage from '../localStorage.js';
 
-
-const localStorageMock = (function () {
+const localStorageMock = (function localStorageMock() {
   let store = {};
 
   return {
