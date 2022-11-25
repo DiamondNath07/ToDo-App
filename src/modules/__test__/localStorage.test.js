@@ -1,6 +1,6 @@
 import Storage from '../localStorage.js';
 
-// eslint-disable-next-line func-names
+
 const localStorageMock = (function () {
   let store = {};
 
