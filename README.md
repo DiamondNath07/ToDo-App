@@ -1,12 +1,8 @@
-
-
 <a name="readme-top"></a>
-
-
 
 <div align="center">
 
-  <img src="./assets/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -37,10 +33,9 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Todo_list] <a name="about-project"></a>
 
 > This a todo-list application built as a CRUD application i.e an app that allows user Create,Read,Update and Delete.
 
@@ -51,8 +46,6 @@
 ### Tech Stack <a name="JavaScript,Jest,Html/Css"></a>
 
 > Javascript is used to render page dynamically and add page functionality. Jest is used for testing and Html/Css is used for page structure.
-
-
 
 <!-- Features -->
 
@@ -104,24 +97,19 @@ Vs studio code or any text editor of your choice
 
 :
 
-
 ### Run tests
 
 To run tests, run the following command:
 
 ```
-locaate the -test-_ file 
+locaate the -test-_ file
 -run npm instal jest
 - run npm start
 ```
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-
-
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -135,10 +123,7 @@ locaate the -test-_ file
 - Twitter: [@DiamondNath07](https://twitter.com/@diamondNath07)
 - LinkedIn: [Diamond Nathaniel I](https://linkedin.com/in/diamond-nathaniel-6b664b245)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,13 +157,11 @@ Feel free to check the [issues page](https://github.com/DiamondNath07/Web-Pack.g
 
 ## ❓ FAQ <a name="faq"></a>
 
-> 
+>
 
 - **[Question_1]**
 
   - [Is_it_responsive and functional]
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
