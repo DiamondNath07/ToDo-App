@@ -96,7 +96,23 @@ describe('task2', () => {
     expect(Storage.getToDo()).toStrictEqual(expected);
   });
 
-  
+  // edit description
+  test('Edit updated description', () => {
+    const tasks = {
+      description: 'Update status',
+      id: 2,
+      completed: false,
+    };
+    const expected = [
+      {
+        description: 'Edit description',
+        id: 2,
+        completed: false,
+      },
+    ];
 
-  
+    Storage.addTodo(tasks);
+    const output = Storage.updateDescription(2, 'Edit description', tasks);
+    expect(output).toStrictEqual(expected);
+  });
 });
