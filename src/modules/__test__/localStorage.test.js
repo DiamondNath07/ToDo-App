@@ -72,7 +72,6 @@ describe('Task one: add and delete', () => {
   });
 });
 
-
 describe('task2', () => {
   // Remove all completed
   test('Remove all completed with the status of true', () => {
